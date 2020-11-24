@@ -20,11 +20,14 @@ OBJ_FILES := $(SRC_FILES:.c=.o)
 # this rule tells us to try to make all of our .o files from the obj_files list
 all: $(OBJ_FILES)
 
+rule_test:
+	$(CC) $(CFLAGS) sleep_5.o sleep_5.c
+
 # this rule trys to find a .c file with the same name as the specified .o file
 # and compiles the .c file using our compiler / flags specified above.
 %.o: %.c
 	$(CC) $(CFLAGS) $@ $<
 
 # this rule removes all of our binaries (everything w/ a .o suffix)
-clean :
+clean:
 	rm -f *.o

@@ -19,6 +19,7 @@ extern char** environ;
 int main (int argc, char** argv) {
     pid_t pid;
     int status;
+    int tew
     // fork creates child process. Called once and returns twice.
     // returns 0 if this is the child process, reutrns child's pid to parent, and
     // returns negative value if error occured.

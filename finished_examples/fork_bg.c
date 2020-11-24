@@ -26,7 +26,7 @@ void sigchild_handler(int signum) {
     // Putting this together, waitpid(-1, &status, WUNTRACED) will
     // return the pid (and set the status) of a stopped, exited, or
     // terminated child process (as long as it is already done). 
-    pid = waitpid(-1, &status, WUNTRACED);
+    pid = waitpid(-1, &status, WUNTRACED );
     printf("\nChild process exited with error number %d\n\n", status);
     return;
 }
